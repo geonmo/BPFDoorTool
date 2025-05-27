@@ -20,9 +20,11 @@
 ## 아래 phase 1-4 를 단계별로 실행
 
 # phase1
-1) ss -0pb | grep -EB1 --colour "$((0x7255))|$((0x5293))|$((0x39393939))"
-2) find . -type f -exec sh -c 'hexdump -ve "1/1 \"%.2x\"" "$1" | grep -q "c6459049c6459135c645922ac6459341c6459459c6459562" && echo "$1"' _ {} \;
-3) netstat -lpn | grep -E ':42[3-9][0-9]{2}|43[0-3][0-9]{2}'
+```bash
+ss -0pb | grep -EB1 --colour "$((0x7255))|$((0x5293))|$((0x39393939))"
+find . -type f -exec sh -c 'hexdump -ve "1/1 \"%.2x\"" "$1" | grep -q "c6459049c6459135c645922ac6459341c6459459c6459562" && echo "$1"' _ {} \;
+netstat -lpn | grep -E ':42[3-9][0-9]{2}|43[0-3][0-9]{2}'
+```
 
 ![image](https://github.com/user-attachments/assets/4bb476e4-f21f-4def-823a-6e4f361fd7d3)
 ![image](https://github.com/user-attachments/assets/a10d167c-1c62-4e91-b8c0-1b42cb8319ac)
