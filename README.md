@@ -42,6 +42,9 @@
 <img src="https://github.com/user-attachments/assets/7a161c80-84db-45ad-9e8f-ccd8ea2eaa42" style="width:600px;">
 
 # phase4
+bpfdoor_bpf.sh  
+bpfdoor_env.sh  
+bpfdoor.yar
 
 # 1.악성코드 뮤텍스/락(Mutex/Lock) 파일 점검
 특정 경로에 생성되는 뮤텍스/락 파일을 점검하여 악성코드 실행 여부를 점검합니다.
@@ -53,13 +56,17 @@
 ---
 
 ### # 명령어 1-1: \*.pid, \*.lock 파일 확인
-```shell
+``` shell
 $ sudo ls -l /var/run/*.pid | awk '$5 == 0 {print $9}'
 $ sudo ls -l /var/run/*.lock | awk '$5 == 0 {print $9}'
 $ sudo stat -c "%a %s %n" /var/run/*.pid /var/run/*.lock 2>/dev/null | awk '$1=="644" && $2==0 { print $3 }'
 
+### # 명령어 1-2: 파일 권한(644,-rw-r--r--), 파일 생성일 확인
+``` shell
+$ sudo ls -al /var/run/<filename>.pid
+### # 명령어 1-2 예시
+
+``` shell
+-rw-r--r--. 1 root root 0 Apr 28 03:17 /var/run/system.pid
 
 
-bpfdoor_bpf.sh  
-bpfdoor_env.sh  
-bpfdoor.yar
