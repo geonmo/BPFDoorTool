@@ -26,7 +26,10 @@
 
 ## phase3 
 1-check-network.sh  
+![image](https://github.com/user-attachments/assets/9bcc7e24-cb30-47a7-9500-0524a77b8a7d)
+
 2-check-files-with-pid.sh
+![image](https://github.com/user-attachments/assets/7a161c80-84db-45ad-9e8f-ccd8ea2eaa42)
 
 ## phase4
 bpfdoor_bpf.sh  
