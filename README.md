@@ -58,6 +58,8 @@ $ sudo ls -l /var/run/*.pid | awk '$5 == 0 {print $9}'
 $ sudo ls -l /var/run/*.lock | awk '$5 == 0 {print $9}'
 $ sudo stat -c "%a %s %n" /var/run/*.pid /var/run/*.lock 2>/dev/null | awk '$1=="644" && $2==0 { print $3 }'
 
+
+
 bpfdoor_bpf.sh  
 bpfdoor_env.sh  
 bpfdoor.yar
