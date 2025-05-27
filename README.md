@@ -28,9 +28,9 @@
 
 ## phase3 
 1-check-network.sh  
-<img src="https://github.com/user-attachments/assets/9bcc7e24-cb30-47a7-9500-0524a77b8a7d" style="width:600px;">
+<img src="https://github.com/user-attachments/assets/9bcc7e24-cb30-47a7-9500-0524a77b8a7d" style="width:600px;">  
 
-2-check-files-with-pid.sh
+2-check-files-with-pid.sh  
 <img src="https://github.com/user-attachments/assets/7a161c80-84db-45ad-9e8f-ccd8ea2eaa42" style="width:600px;">
 
 ## phase4
