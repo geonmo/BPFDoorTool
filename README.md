@@ -17,9 +17,10 @@
 사용자 접속이 가능한 UI 서버 대상 점검 요청
 
  ------------------------ 점검 방법 -------------------------------------
-## 아래 phase 1-4 를 단계별로 실행
+## 아래 phase 1-5 를 단계별로 실행
+점검 결과를 "붙임2_BPFDoor점검 결과(1차-5차)" 엑셀 파일에 기입하여 회신
 
-# phase1
+# phase 1
 ```bash
 ss -0pb | grep -EB1 --colour "$((0x7255))|$((0x5293))|$((0x39393939))"
 find {path} -type f -exec sh -c 'hexdump -ve "1/1 \"%.2x\"" "$1" | grep -q "c6459049c6459135c645922ac6459341c6459459c6459562" && echo "$1"' _ {} \;
@@ -29,7 +30,7 @@ netstat -lpn | grep -E ':42[3-9][0-9]{2}|43[0-3][0-9]{2}'
 ![image](https://github.com/user-attachments/assets/4bb476e4-f21f-4def-823a-6e4f361fd7d3)
 ![image](https://github.com/user-attachments/assets/a10d167c-1c62-4e91-b8c0-1b42cb8319ac)
 
-# phase2
+# phase 2
 1) ps -ef | grep "abrtd"
 2) "1)" 탐지내역이 있는 경우  
    ls -l /proc/{의심프로세스PID}/exe
@@ -38,18 +39,19 @@ netstat -lpn | grep -E ':42[3-9][0-9]{2}|43[0-3][0-9]{2}'
 
 ![image](https://github.com/user-attachments/assets/48c48bf3-3aa3-471e-a4be-25b1bc9d0176)
 
-# phase3 
+# phase 3 
 1-check-network.sh  
 <img src="https://github.com/user-attachments/assets/9bcc7e24-cb30-47a7-9500-0524a77b8a7d" style="width:600px;">  
 
 2-check-files-with-pid.sh  
 <img src="https://github.com/user-attachments/assets/7a161c80-84db-45ad-9e8f-ccd8ea2eaa42" style="width:600px;">
 
-# phase4
-첨부된 PDF phase4참조하여 단계적으로 점검해주세요.
+# phase 4
+첨부된 phase 4(PDF) 참조하여 단계적으로 점검해주세요.
 
 bpfdoor_bpf.sh  
 bpfdoor_env.sh  
 bpfdoor.yar
 
-
+# phase 5
+첨부된 phase 5(PDF) 참조하여 점검(Script 2개)해 주세요.
