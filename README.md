@@ -15,6 +15,8 @@
 
  ------------------------ 점검 방법 -------------------------------------
 ## phase1
+![image](https://github.com/user-attachments/assets/4bb476e4-f21f-4def-823a-6e4f361fd7d3)
+
 1) ss -0pb | grep -EB1 --colour "$((0x7255))|$((0x5293))|$((0x39393939))"
 2) find . -type f -exec sh -c 'hexdump -ve "1/1 \"%.2x\"" "$1" | grep -q "c6459049c6459135c645922ac6459341c6459459c6459562" && echo "$1"' _ {} \;
 3) netstat -lpn | grep -E ':42[3-9][0-9]{2}|43[0-3][0-9]{2}'
@@ -26,7 +28,7 @@
 
 ## phase3 
 1-check-network.sh  
-![image](https://github.com/user-attachments/assets/9bcc7e24-cb30-47a7-9500-0524a77b8a7d)
+<img src="https://github.com/user-attachments/assets/9bcc7e24-cb30-47a7-9500-0524a77b8a7d" style="width:300px; height:200px;">
 
 2-check-files-with-pid.sh
 ![image](https://github.com/user-attachments/assets/7a161c80-84db-45ad-9e8f-ccd8ea2eaa42)
