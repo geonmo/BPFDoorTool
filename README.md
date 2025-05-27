@@ -26,13 +26,13 @@
 ![image](https://github.com/user-attachments/assets/a10d167c-1c62-4e91-b8c0-1b42cb8319ac)
 
 # phase2
-![image](https://github.com/user-attachments/assets/4f6cd3af-92a8-404a-80af-d8da8fcce998)
-
 1) ps -ef | grep "abrtd"
-
-![image](https://github.com/user-attachments/assets/48c48bf3-3aa3-471e-a4be-25b1bc9d0176)
 2) "1)" 탐지내역이 있는 경우  
    ls -l /proc/{의심프로세스PID}/exe
+   
+![image](https://github.com/user-attachments/assets/4f6cd3af-92a8-404a-80af-d8da8fcce998)
+
+![image](https://github.com/user-attachments/assets/48c48bf3-3aa3-471e-a4be-25b1bc9d0176)
 
 # phase3 
 1-check-network.sh  
