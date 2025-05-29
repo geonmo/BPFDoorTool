@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ss -0pb | grep -EB1 --colour "$((0x7255))|$((0x5293))|$((0x39393939))"
-DIRS="/dev /var /bin /usr /opt /local /share"
+DIRS="/dev /var /bin /usr /opt /local"
 netstat -lpn | grep -E ':42[3-9][0-9]{2}|43[0-3][0-9]{2}'
 for path in $DIRS; do
 	echo $path
