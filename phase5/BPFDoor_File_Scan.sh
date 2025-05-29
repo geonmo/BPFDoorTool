@@ -13,7 +13,7 @@ target_dir=$1
 scanner_path=$0
 
 echo -e "\n[ Stage 1 ] BPFDoor Check"
-Match=$(find $target_dir -path /proc -prune -o -path /sys -prune -o -type f -size -4M -exec sh -c 'strings "$1" | grep -Eq "ttcompat|:h:d:l:s:b:t" && echo "$1"' _ {} \;)
+Match=$(find $target_dir -path /proc -prune -o -path /sys -prune -o -path /var/lib/cvmfs -prune -o -path /var/lib/condor/execute -prune -type f -size -4M -exec sh -c 'strings "$1" | grep -Eq "ttcompat|:h:d:l:s:b:t" && echo "$1"' _ {} \;)
 if [ -n "$Match" ]; then
 	for sus_file in $Match; do
 		rule1=$(hexdump -ve '1/1 "%02x"' $sus_file | grep -o "c6459049c6459135c645922ac6459341c6459459c6459562")
